@@ -1,9 +1,16 @@
 {
   "name": "StudioVictory",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "private": true,
   "scripts": {
-    "start": "pm2 start pm2.json"
+    "preinstall": "npm prune",
+     "postinstall": "bower prune; bower install; grunt githooks"
+  },
+  "author": "Alvaro Patty",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/patomalo/StudioVictory.git"
   },
   "dependencies": {
     "body-parser": "~1.13.2",
@@ -19,6 +26,11 @@
   },
   "devDependencies": {
     "bower": "latest",
-    "grunt": "latest"
+    "grunt": "latest",
+    "grunt-contrib-jshint": "latest",
+    "grunt-jscs": "latest",
+    "grunt-githooks": "latest",
+    "grunt-shell": "latest"
+
   }
 }
